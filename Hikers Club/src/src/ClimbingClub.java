@@ -1,11 +1,7 @@
-   package src;
+package src;
 import java.util.*;
-    /**
-    * @reference: AP College Board
-    * 
-    */
 
-    public class ClimbingClub{
+    public class ClimbingClub { // Class including helper methods within the list.
 
         /** The list of climbs completed by members of the club.
          * Guaranteed not to be null. Contains only non-null references.
@@ -19,13 +15,13 @@ import java.util.*;
 
 
  
-        public void addClimbOne(String h, String peakName, String t){
+        public void addClimbOne(String h, String peakName, String t) { // Adder method for the first conditions.
             ClimbInfo ci = new ClimbInfo(h, peakName,t);
             climbList.add(ci);
         }
         
         
-        public ClimbInfo addClimbTwo(String h2, String peakName, String t2){
+        public ClimbInfo addClimbTwo(String h2, String peakName, String t2) { // 2nd Variation of adder method along with a few more conditions.
             for (int i = 0; i < climbList.size(); i++) {
                 if (peakName.compareTo(climbList.get(i).getName()) <= 0) {
                     climbList.add(i, new ClimbInfo(h2, peakName, t2));
@@ -38,7 +34,7 @@ import java.util.*;
 
 
 
-        public void displayClimbList() {
+        public void displayClimbList() { // Helper method to display current climb list.
             String a = "";
         	for(ClimbInfo ci: climbList){
                a += "Name:   " + " Location:   " + " Duration(Hours):" + "\n" + ci.getHName() + "        " + ci.getName() + "            " + ci.getTime() + "\n";
@@ -47,7 +43,7 @@ import java.util.*;
         	JOP.msg(a);
         }
         
-        public void removeClimbList() {
+        public void removeClimbList() { // Helper method to remove hiker from list.
         	
         	String s = JOP.in("Which hiker do you want to remove?");
         	for(ClimbInfo di: climbList) {
@@ -65,7 +61,7 @@ import java.util.*;
 
 
         /** @return the number of distinct names in the list of climbs - MP */
-        public int modifiedDistinctPeakNames(){
+        public int modifiedDistinctPeakNames(){ 
             int count = 1;
             for(int i = 0; i < climbList.size()- 1; i++){
                 if(!climbList.get(i).getName().equalsIgnoreCase(climbList.get(i+1).getName())){
