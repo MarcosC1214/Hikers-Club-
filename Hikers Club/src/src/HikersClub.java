@@ -27,7 +27,7 @@ import com.jgoodies.forms.factories.DefaultComponentFactory;
 
 import src.Body;
 
-public class HikersClub extends JPanel {
+public class HikersClub extends JPanel { // Class consisting of panel creation and a few helper methods.
 
 	static ClimbingClub cc = new ClimbingClub();
 	/**
@@ -39,7 +39,7 @@ public class HikersClub extends JPanel {
 	private Panel panel_2;
 	static JFrame frame;
 	
-	public HikersClub() throws IOException {
+	public HikersClub() throws IOException { 
 		frame = new JFrame();
 		JPanel panel = new JPanel(new BorderLayout());
 		
