@@ -13,22 +13,21 @@ import resources.SoundEffects;
 
 
 
-public class Main {
+public class Main { // Main booter method to initiate program.
 	
-	//public static SoundEffects sound = new SoundEffects();
+	public static SoundEffects sound = new SoundEffects();
 	
 	@SuppressWarnings("unused")
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception { // Static method that runs the program.
 		// TODO Auto-generated method stub
-		 //Main sound = new Main("resources/Nature.wav");
-		 //sound.Run("Nature.wav");
-		 //SoundEffects.clip1.loop(Clip.LOOP_CONTINUOUSLY);
+		 Main sound = new Main("resources/Nature.wav");
+		 sound.Run("Nature.wav");
+		 SoundEffects.clip1.loop(Clip.LOOP_CONTINUOUSLY);
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					HikersClub Main = new HikersClub();
-//					main.createAndShowGUI();
 					final JFrame frame = new JFrame();
 					frame.setTitle("Welcome to Koala National Preserve!");
 					frame.getContentPane().add(Main);					
@@ -47,9 +46,6 @@ public class Main {
 					        }
 					    }
 					});
-					
-//					OrderMenu window = new OrderMenu();
-//					window.getFrame().setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -59,27 +55,4 @@ public class Main {
 			}
 		});
 	}
-	
-	    /*public Main(String filePath) throws InterruptedException {
-		JFrame f = new JFrame();
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		f.setTitle("Test Sound");
-		f.setSize(300, 200);
-		f.setVisible(false);
-
-		try {
-			// Open an audio input stream.
-//          File soundFile = new File(pen); 
-			URL resource = getClass().getClassLoader().getResource(filePath);
-			AudioInputStream audioIn = AudioSystem.getAudioInputStream(resource);
-			Clip clip = AudioSystem.getClip();
-
-			clip.open(audioIn);
-			clip.start();
-			clip.loop(Clip.LOOP_CONTINUOUSLY);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-*/
 }
