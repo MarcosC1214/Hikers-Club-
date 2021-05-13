@@ -50,7 +50,7 @@ import java.awt.GridLayout;
 
 import src.HikersClub;
 
-public class Body extends JPanel{
+public class Body extends JPanel{ // GUI class initiating most GUI including panels and frames.
 	
 	static ClimbingClub cc = new ClimbingClub();
 	private Panel panel_1;
@@ -63,7 +63,7 @@ public class Body extends JPanel{
 	/**
 	 * @wbp.parser.entryPoint
 	 */
-	void createAndShowGUI() throws IOException {
+	void createAndShowGUI() throws IOException { // GUI creator running sequence.
 		
 		JFrame frmMainMenu = new JFrame("Main Menu");
 		frmMainMenu.setAlwaysOnTop(true);
@@ -169,7 +169,7 @@ public class Body extends JPanel{
         
 	}
 	
-	public void SoundPlusImage(String s, String x, String y, String z) throws Exception {
+	public void SoundPlusImage(String s, String x, String y, String z) throws Exception { // Sound effects along with images helper method.
         SoundEffects.clip1.stop();
         sound2.Run2(s);
         image.display(x, y, z);
