@@ -1,6 +1,6 @@
  package src;
  
-public class ClimbInfo {
+public class ClimbInfo { // Class containing getters and setters for list along with a few helper methods.
 
             String pName;
             String cTime;
@@ -13,27 +13,27 @@ public class ClimbInfo {
          *  @param t the number of minutes taken to complete the climb
          * @param h 
          */
-        public ClimbInfo( String h, String peakName, String t){
+        public ClimbInfo( String h, String peakName, String t){ 
         	hName = h;
             pName = peakName;
             cTime = t;
             foundKoala = (Math.random() * 10 > 7);   
         }
-        public String getName(){    
+        public String getName(){ // Getter for name.
             return pName;
         }       
         
-        public boolean getFound() {
+        public boolean getFound() { // Getter for Koala found.
         	return foundKoala;
         }
         
-        public String getHName() {
+        public String getHName() { // Getter for hiker name.
         	return hName;
         }
-        public String getTime(){
+        public String getTime(){ // Getter for hike duration time.
             return cTime;
         }
-        public String toString(){
+        public String toString(){ // toString method to format all lines in corresponding font.
             return(getName() + " , " + getTime());
         }
     }
